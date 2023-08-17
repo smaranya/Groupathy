@@ -1,0 +1,28 @@
+{
+  "1": {
+    "question": "Hello and Welcome to Groupathy. Like you, we know that mental health conditions are real, common and treatable. And recovery is possible.",
+    "answer": []
+  },
+  "2": {
+    "question": "The tests in this app are one of the quickest ways to determine whether you are experiencing symptoms of a specific mental health condition.",
+    "answer": []
+  },
+  "3": {
+    "question": "Each test consists of a series of questions which should be answered honestly and in one sitting.",
+    "answer": ["GOT IT"]
+  },
+  "4": {
+    "question": "Great! Before we start, it'd be good if you could take a look at our Privacy Policy. Afterwards we can continue.",
+    "type": "PRIVACY CONSENT",
+    "answer": ["I accept data privacy policy"]
+  },
+  "5": {
+    "question": "Thanks! Last thing before we start. Would you mind if we sent you the occasional notification? For Example, to let you know if we launch a new type of test.",
+    "type": "NOTIFICATION CONSENT",
+    "answer": ["No thanks", "Yes please"]
+  },
+  "6": {
+    "question": "Ok Great! Are you ready to take the test?",
+    "answer": ["I'm ready"]
+  }
+}
