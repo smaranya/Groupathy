@@ -1,4 +1,4 @@
-import React, {StatelessComponent} from 'react';
+import React from 'react';
 import {View, StyleProp, ViewStyle} from 'react-native';
 import {Spaces, getSpace} from '../../styles/spaces';
 import {SeparatorSizes, getSeparatorSize} from '../../styles/separatorSizes';
@@ -19,7 +19,7 @@ export type HorizontalSepratorProps = {
   style?: StyleProp<ViewStyle>;
 } & Partial<typeof defaultProps>;
 
-export const HorizontalSeprator: StatelessComponent<HorizontalSepratorProps> = (
+export const HorizontalSeprator: React.FC<HorizontalSepratorProps> = (
   props,
 ) => {
   const {style, width, height, horizontalMargin, verticalMargin, color} = props;

@@ -11,7 +11,7 @@ type NavigatorProps = {
 };
 
 const AppNavigator = (props: NavigatorProps) => {
-  const {name = RouteName.ONBOARDING, params = {}} =
+  const {name = RouteName.HOME, params = {}} =
     (props.initialUrl && screenForPath(props.initialUrl, routes)) || {};
   const initialParamsFromApp = props.initialParams || {};
   const stackViewProps: StackViewProps = {

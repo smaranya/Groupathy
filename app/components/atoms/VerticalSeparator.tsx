@@ -1,4 +1,4 @@
-import React, {StatelessComponent} from 'react';
+import React from 'react';
 import {View} from 'react-native';
 import {Spaces, getSpace} from '../../styles/spaces';
 import {SeparatorSizes, getSeparatorSize} from '../../styles/separatorSizes';
@@ -17,7 +17,7 @@ export type VerticalSeparatorProps = {
   height: number;
 } & Partial<typeof defaultProps>;
 
-export const VerticalSeparator: StatelessComponent<VerticalSeparatorProps> = (
+export const VerticalSeparator: React.FC<VerticalSeparatorProps> = (
   props,
 ) => {
   const {width, height, horizontalMargin, verticalMargin, color} = props;

@@ -1,4 +1,4 @@
-import React, {StatelessComponent} from 'react';
+import React from 'react';
 import {Text, TextProps} from 'react-native';
 import {getName, FontStyles} from '../../styles/fonts/names';
 import {getSize, Sizes} from '../../styles/fonts/sizes';
@@ -12,7 +12,7 @@ const defaultProps = {
 
 export type TextViewProps = Partial<typeof defaultProps> & TextProps;
 
-export const TextView: StatelessComponent<TextViewProps> = (props) => {
+export const TextView: React.FC<TextViewProps> = (props) => {
   const {style, fontSize, fontFamily, textColor, children, ...rest} = props;
 
   const size = getSize(fontSize);

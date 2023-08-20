@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "700158952884",
+    "project_id": "groupathy-f41d3",
+    "storage_bucket": "groupathy-f41d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700158952884:android:e1b67b3867a03248639ee1",
+        "android_client_info": {
+          "package_name": "com.groupathy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700158952884-94a0lvalvtlsfne5sm4eo0ptq6s68j0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMmOUzhomPzEiHY0LIIlkG4QnedzmzJF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700158952884-94a0lvalvtlsfne5sm4eo0ptq6s68j0i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

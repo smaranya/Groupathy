@@ -3,11 +3,12 @@ import AppNavigator from './navigation/MainAppNavigator';
 import SplashScreen from 'react-native-splash-screen';
 import remoteConfig from '@react-native-firebase/remote-config';
 import NetInfo, {NetInfoState} from '@react-native-community/netinfo';
-import firebase from '@react-native-firebase/app';
+//import firebase from '@react-native-firebase/app';
 
 const DEAFULT_SPLASH_UP_TIME = 1000;
 
 class App extends Component {
+  
   timeOutId: any;
   async componentDidMount() {
     await remoteConfig().setConfigSettings({

@@ -70,7 +70,7 @@ const styleForText = (textPosition?: TextPosition) => {
 export type TextPosition = 'start' | 'center' | 'end';
 
 export type TextProps = {
-  text?: string;
+  text?: string | undefined;
 } & TextViewProps;
 
 export type TextOverImageProps = {
@@ -87,7 +87,7 @@ export const TextInImageWithShim: FunctionComponent<TextOverImageProps> = (
     xtraData,
     style,
     imageProps,
-    textProps: {text = undefined, ...restTextProps} = {},
+    textProps: {text, ...restTextProps} = {},
     textPosition,
     shimBackgroudColor,
   } = props;

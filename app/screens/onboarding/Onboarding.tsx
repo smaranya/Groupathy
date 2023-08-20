@@ -25,7 +25,7 @@ import remoteConfig from '@react-native-firebase/remote-config';
 import Modal from 'react-native-modal';
 import UserInputCard from './UserInputModal';
 //import ProgressBar from '../../components/commons/CircularProgress';
-import crashlytics from '@react-native-firebase/crashlytics';
+//import crashlytics from '@react-native-firebase/crashlytics';
 import NetInfo, {NetInfoState} from '@react-native-community/netinfo';
 
 const groupathyAvatar = require('../../assets/avatar_groupathy.png');
@@ -242,9 +242,9 @@ class Onboarding extends PureComponent<OnboardingProps, State> {
             });
           }
         } catch (e) {
-          crashlytics().recordError(
-            new Error('Wrong config format for organizations'),
-          );
+          // crashlytics().recordError(
+            //new Error('Wrong config format for organizations'),
+          //);
         }
       }
     }

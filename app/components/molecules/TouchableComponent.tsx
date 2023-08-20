@@ -1,4 +1,4 @@
-import React, {StatelessComponent} from 'react';
+import React from 'react';
 import {
   StyleSheet,
   TouchableHighlight,
@@ -11,7 +11,7 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
 } from 'react-native';
-import {Colors, ColorType, getColor} from '../../styles/colors';
+import { Colors, ColorType, getColor } from '../../styles/colors';
 
 const styles = StyleSheet.create({
   container: {
@@ -47,8 +47,26 @@ const defaultProps = {
 export type TouchableProps = {
   style?: StyleProp<ViewStyle>;
   children?: React.ReactNode;
+  touchable?: Touchables;
 } & CommonProps &
   Partial<typeof defaultProps>;
+
+const TouchableComponent: React.FC<TouchableProps> = (props) => {
+  const { style, touchable, underlayColorType, children, ...rest } = props;
+  const buttonUnderlayColor = getColor(underlayColorType);
+  const Touchable = getTouchable(touchable || defaultTouchable);
+  return (
+    <TouchableComponent
+      style={[styles.container, style]}
+      underlayColor={buttonUnderlayColor}
+      {...rest}
+    >
+      {children}
+    </TouchableComponent>
+  );
+};
+
+TouchableComponent.defaultProps = defaultProps;
 
 const getTouchable = (touchable?: Touchables) => {
   if (!touchable) touchable = defaultTouchable;
@@ -59,18 +77,4 @@ const getTouchable = (touchable?: Touchables) => {
   return TouchablesMap[touchable];
 };
 
-export const Touchable: StatelessComponent<TouchableProps> = (props) => {
-  const {style, touchable, underlayColorType, children, ...rest} = props;
-  const buttonUnderlayColor = getColor(underlayColorType);
-  const Touchable: React.ReactType = getTouchable(touchable);
-  return (
-    <Touchable
-      style={[styles.container, style]}
-      underlayColor={buttonUnderlayColor}
-      {...rest}>
-      {children}
-    </Touchable>
-  );
-};
-
-Touchable.defaultProps = defaultProps;
+export default TouchableComponent;

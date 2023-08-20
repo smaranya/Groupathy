@@ -6,9 +6,11 @@ import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactActivityDelegate;
 import android.os.Bundle;
 import org.devio.rn.splashscreen.SplashScreen;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class MainActivity extends ReactActivity {
 
+  private FirebaseAnalytics mFirebaseAnalytics;
   /**
    * Returns the name of the main component registered from JavaScript. This is used to schedule
    * rendering of the component.
@@ -25,6 +27,8 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected ReactActivityDelegate createReactActivityDelegate() {
+    // Obtain the FirebaseAnalytics instance.
+    mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
     SplashScreen.show(this);
     return new DefaultReactActivityDelegate(
       

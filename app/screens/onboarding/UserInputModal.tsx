@@ -97,14 +97,14 @@ const styles = StyleSheet.create({
 export type State = Partial<typeof defaultState>;
 
 export type UserInputCardProps = {
-  organizations: Array<Organization>;
+  organizations: Array<Organization> | undefined;
   onSaveUserData: {(organization: string, pincode: string): void};
   onClose: {(): void};
   onVisible?: {(): void};
 };
 
 const convertToAutoSuggestData = (
-  organizations: Array<Organization>,
+  organizations: Array<Organization> | undefined,
 ): Array<string> => {
   let data = [] as Array<string>;
   if (organizations && organizations.length > 0) {

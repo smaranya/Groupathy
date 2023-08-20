@@ -1,4 +1,4 @@
-import React, {StatelessComponent, useRef, useEffect} from 'react';
+import React, {useRef, useEffect} from 'react';
 import {Animated} from 'react-native';
 import {getIconSize} from '../../styles/iconSizes';
 import {getColor, ColorType, Colors} from '../../styles/colors';
@@ -20,7 +20,7 @@ const animatedIconDefaultProps = {
   enableAnimation: true,
 };
 
-export const AnimatedIcon: StatelessComponent<AnimatedIconProps> = (props) => {
+export const AnimatedIcon: React.FC<AnimatedIconProps> = (props) => {
   const {
     style,
     iconSize,
